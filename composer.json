@@ -16,6 +16,15 @@
         "bin-dir": "bin"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.7"
+        "phpunit/phpunit": "~4.7",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "scripts": {
+        "cs:check":         "bin/phpcs -p src",
+        "cs:fix":           "bin/phpcbf --standard=PSR2 --tab-width=4 src | grep -v -e '(0 fixable' -e 'Changing into'",
+        "cs:source":        "bin/phpcs -p --report=source src",
+        "cs:summary":       "bin/phpcs -p --report=summary src",
+        "test:coverage":    "bin/phpunit --bootstrap vendor/autoload.php tests --coverage-html='tests/coverage' --coverage-text",
+        "test:unit":        "bin/phpunit --bootstrap vendor/autoload.php tests --no-coverage"
     }
 }
