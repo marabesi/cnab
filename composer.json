@@ -1,0 +1,21 @@
+{
+    "name": "hagnat/cnab",
+    "description": "a CNAB reader/writter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valdir Bruxel Junior",
+            "email": "hagnat@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "~5.5",
+        "symfony/yaml": "~2.7"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.7"
+    }
+}
